@@ -14,6 +14,9 @@ Parse the logs generated from the previous step for three similarity thresholds 
 - `plot_starting_populations_numbers.py`:  
 Visualizes the summary statistics from `Starting_populations.csv` to compare the effect of different thresholds on starting population size.
 
+- `get_similarity_distributions.py`:
+Builds HSR-similarity distributions for the starting populations for each threshold folder (0.3, 0.4, and 0.5). The outputs are are organized under the `Similarity_distributions`folder.
+
 ## Usage 
 All scripts in this folder can be run directly with:  
 ```bash
