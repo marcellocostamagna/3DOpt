@@ -22,7 +22,7 @@ import glob
 import matplotlib.pyplot as plt
 
 # === CONFIGURATION ===
-N_RUNS = 3  # Adjust as needed
+N_RUNS = 10  # Adjust as needed
 BASE_OUT = "3D_Generators_analysis"
 SINGLE_SCRIPT = "run_single_generators.py"
 TARGETS = [

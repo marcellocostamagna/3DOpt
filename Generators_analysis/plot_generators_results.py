@@ -26,9 +26,14 @@ agg_csv     = RESULTS_DIR / "average_scores_and_times.csv"
 PLOT_OUT = Path("./Generators_plots") 
 PLOT_OUT.mkdir(exist_ok=True)
 
-method_labels = ['CCDC', 'RDKit', 'OBabel']
-csv_methods = ['ccdc', 'rdkit', 'obabel']
-colors = ['#1f77b4', '#ff7f0e', '#2ca02c']
+# method_labels = ['CCDC', 'RDKit', 'OBabel']
+# csv_methods = ['ccdc', 'rdkit', 'obabel']
+# colors = ['#1f77b4', '#ff7f0e', '#2ca02c']
+
+method_labels = ['CCDC', 'OBabel', 'RDKit']
+csv_methods   = ['ccdc', 'obabel', 'rdkit']
+colors        = ['#1f77b4', '#ff7f0e', '#2ca02c'] 
+
 markers = ['o', 's', '^']
 
 hist_df = pd.read_csv(success_csv)

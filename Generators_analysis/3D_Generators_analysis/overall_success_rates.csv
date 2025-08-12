@@ -1,0 +1,4 @@
+method,n_success,n_total,success_rate
+ccdc,285,320,0.890625
+rdkit,170,320,0.53125
+obabel,250,320,0.78125
