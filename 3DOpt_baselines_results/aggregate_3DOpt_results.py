@@ -52,12 +52,13 @@ def find_results_csvs(folder):
                         yield f
 
 def aggregate_method(folder, outname):
-    """Aggregate results.csv from all runs for one method folder, average by task."""
+    """Aggregate results.csv from all runs for one method folder, average by task,
+    and append a final 'Aggregate' row with the sum of 3DOpt scores (benchmark score)."""
     csv_files = list(find_results_csvs(folder))
     if not csv_files:
         print(f"⚠️  No results.csv found in {folder}")
         return None
-    # Each CSV: at least columns 'task', '3DOpt_Score'
+
     dfs = []
     for f in csv_files:
         df = pd.read_csv(f)
@@ -65,14 +66,29 @@ def aggregate_method(folder, outname):
             print(f"⚠️  {f} missing expected columns.")
             continue
         dfs.append(df[["task", "3DOpt_Score"]])
+
     if not dfs:
         print(f"❌ No valid results in {folder}")
         return None
+
     bigdf = pd.concat(dfs, ignore_index=True)
-    agg = bigdf.groupby("task")["3DOpt_Score"].mean().reset_index()
-    agg = agg.sort_values("task")
+    agg = bigdf.groupby("task", as_index=False)["3DOpt_Score"].mean()
+
+    # Sort by numeric task index if present (e.g., "10_ABEHAU")
+    def task_index(t):
+        try:
+            return int(str(t).split("_", 1)[0])
+        except Exception:
+            return 10**9  # push non-matching to end
+
+    agg = agg.sort_values(key=lambda s: s.map(task_index), by="task")
+
+    # Append aggregate (sum) row
+    total = agg["3DOpt_Score"].sum()
+    agg = pd.concat([agg, pd.DataFrame([{"task": "Aggregate", "3DOpt_Score": total}])], ignore_index=True)
+
     agg.to_csv(outname, index=False)
-    print(f"✅ Saved average results for {folder} to {outname}")
+    print(f"✅ Saved average results for {folder} to {outname} (Aggregate sum: {total:.6f})")
 
 if __name__ == "__main__":
     for folder in RESULT_FOLDERS:

@@ -10,7 +10,7 @@ import logging
 import warnings
 
 # Set similarity threshold and log file name
-SIMILARITY_THRESHOLD = 0.5
+SIMILARITY_THRESHOLD = 0.3
 log_filename = f"starting_populations_{str(SIMILARITY_THRESHOLD).replace('.', '_')}.log"
 
 # Set up logging
@@ -122,9 +122,6 @@ if __name__ == "__main__":
     csv_file = '../Filtering/viable_structures.csv'
     df = pd.read_csv(csv_file)
     entries = df['Identifier'].tolist()
-    
-    entries = entries[:10000]
-
     logging.info(f"Starting parallel fingerprint precomputation for {len(entries)} structures...")
 
     num_processes = cpu_count()

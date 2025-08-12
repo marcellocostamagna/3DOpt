@@ -59,7 +59,7 @@ def plot_horizontal_histogram(data, title, svg_path, color):
     ax.set_yticklabels([f"{label}" for label in labels], fontsize=9, fontname='Arial')
     ax.invert_yaxis()
     ax.set_xlabel("Count", fontsize=10, fontname='Arial')
-    ax.set_title(f"{title} Distribution", fontweight='bold', fontsize=11, fontname='Arial')
+    # ax.set_title(f"{title} Distribution", fontweight='bold', fontsize=11, fontname='Arial')
     ax.tick_params(axis='both', labelsize=9)
     
     ax.spines['right'].set_visible(False)

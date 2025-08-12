@@ -1,9 +1,7 @@
 cif/
 .DS_Store
 .vscode/
-*.sdf
 *.mol
-*.csv
 *.duckdb
 __pycache__/
 Results_*

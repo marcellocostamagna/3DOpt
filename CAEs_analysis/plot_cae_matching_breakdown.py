@@ -73,7 +73,7 @@ bars3 = ax.bar(ind, df['pct_no_match'], bar_width, bottom=df['pct_matched'] + df
 # Labels & ticks
 ax.set_ylabel('Connected Atom Environments (%)', fontsize=10, fontname='Arial')
 ax.set_xlabel('Target', fontsize=10, fontname='Arial')
-ax.set_title(f'CAE Matching For Similarity Threshold {thr_str}', fontsize=10, fontname='Arial', fontweight='bold')
+# ax.set_title(f'CAE Matching For Similarity Threshold {thr_str}', fontsize=10, fontname='Arial', fontweight='bold')
 ax.set_xticks(ind)
 ax.set_xticklabels(targets, rotation=45, ha='right', rotation_mode='anchor', fontsize=8, fontname='Arial')
 ax.tick_params(axis='both', labelsize=8)

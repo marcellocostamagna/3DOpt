@@ -14,4 +14,6 @@ dependencies:
   - matplotlib
   - pip:
     - hsr
-
+    - python-docx
+    - duckdb
+    - tqdm

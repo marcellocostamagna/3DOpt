@@ -42,11 +42,23 @@ colors = [ '#d62728', '#1f77b4', '#ff7f0e', '#2ca02c',]
 # ------------------------------------------------------------
 dfs = []
 labels = []
+bench_totals = {} 
 
 for fname, label in file_labels:
     df = pd.read_csv(fname + ".csv")
     if 'task' not in df.columns or '3DOpt_Score' not in df.columns:
         raise ValueError(f"{fname}.csv must contain 'task' and '3DOpt_Score' columns.")
+    
+    # Capture aggregate (3DOpt benchmark score) if present
+    agg_mask = df['task'].astype(str).str.strip().str.lower().eq('aggregate')
+    if agg_mask.any():
+        bench_totals[label] = float(df.loc[agg_mask, '3DOpt_Score'].iloc[0])
+    else:
+        bench_totals[label] = np.nan  
+
+    # Drop aggregate for plotting
+    df = df[~agg_mask].copy()
+    
     dfs.append(df)
     labels.append(label)
 
@@ -87,7 +99,6 @@ def clean_label(t):
 
 ax.set_ylabel("3DOpt Score", fontsize=10, fontname='Arial')
 ax.set_xlabel("Task", fontsize=10, fontname='Arial')
-# ax.set_title("3DOpt Scores for Random Sampler", fontsize=10, fontname='Arial', fontweight='bold')
 
 # Center ticks
 ax.set_xticks([p + bar_width * (n_methods - 1) / 2 for p in x])
@@ -113,7 +124,7 @@ for label in ax.get_yticklabels():
 
 # Legend
 legend = ax.legend(
-    loc='upper right',
+    loc='lower left',
     fontsize=7,
     title_fontsize=7,
     prop={'family': 'Arial', 'size': 7},
@@ -124,6 +135,10 @@ legend = ax.legend(
 )
 
 legend.get_frame().set_linewidth(0.4)
+
+# Horizontal grid lines
+ax.grid(axis='y', linestyle='--', linewidth=0.4, alpha=0.7)
+ax.set_axisbelow(True)  
 
 # Hide top and right spines
 ax.spines['right'].set_visible(False)
@@ -137,7 +152,30 @@ right = n_tasks - 1 + group_width + buffer - bar_width
 ax.set_xlim(left, right)
 
 # ------------------------------------------------------------
-# 5) Save the figure
+# 5) Benchmark-score box 
+# ------------------------------------------------------------
+# Build multi-line text, skipping NaNs
+lines = []
+for lab in labels:
+    val = bench_totals.get(lab, np.nan)
+    if not np.isnan(val):
+        lines.append(f"{lab}: {val:.1f}")
+        
+if lines:
+    box_text = r"$\mathbf{3DOpt\ Benchmark\ Scores}$" + "\n" + "\n".join(lines)
+else:
+    box_text = r"$\mathbf{3DOpt\ Benchmark\ Scores}$\n—"
+    
+ax.text(
+    0.98, 0.05, box_text,
+    transform=ax.transAxes,
+    ha='right', va='bottom',
+    fontsize=8, fontname='Arial',
+    bbox=dict(boxstyle='round,pad=0.3', facecolor='white', edgecolor='black', linewidth=0.4)
+)
+
+# ------------------------------------------------------------
+# 6) Save the figure
 # ------------------------------------------------------------
 fig.tight_layout(pad=0.5)
 output_path = Path("3DOpt_RndSam_Scores.svg")
