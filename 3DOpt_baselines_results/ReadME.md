@@ -79,11 +79,17 @@ Scripts for calculating and summarizing success rates of baseline runs.
 They report, for each run and task, the number of structures scored, number of zero-score entries, total expected molecules, and the overall and per-run success rates.
 **Usage:**  
 ```bash
-python get_success_rate_RndSam.py Results_RndSam_RDKit_10Reps/ [--per-task]
-python get_success_rate_ChemGE.py Results_ChemGE_OBabel_10Reps/ [--per-task]
+python get_success_rate_RndSam.py Results_RndSam_RDKit/ [--per-task]
+python get_success_rate_ChemGE.py Results_ChemGE_OBabel/ [--per-task]
 ```
 The `--per-task` option (optional) prints detailed per-task statistics.
 
+### `plot_delta_scores.py`
+Scripts to compute and visualize the differences in scores between the random sampler and the ChemGE baselines.
+**Usage:**  
+```bash
+python plot_delta_scores.py
+```
 
 ## Notes
 
