@@ -4,7 +4,7 @@ This folder contains scripts and workflows for benchmarking 3D molecular structu
 
 ## Scripts
 
-- `run_single_generators.py`:  
+### `run_single_generators.py`  
 Runs a single benchmarking experiment for all specified targets and generator methods (CCDC, RDKit, OBabel) using a given random seed. Designed for use as a worker script called by the multi-run manager.
 **Usage:**  
 ```bash
@@ -15,7 +15,7 @@ python run_single_generators.py output_folder run_seed
 - `success_summary.txt` and `success_summary.csv`: Tabular summary of per-target generator successes
 - Per-method SDF files in subfolders (optional, if code is configured to save them)  
 
-- `run_multiple_generators.py`:    
+### `run_multiple_generators.py`    
 Automates the execution of multiple independent runs using `run_single_generators.py` (with different random seeds), aggregates the results across runs, and produces summary CSVs and quick-look plots.  
 **Usage:**  
 ```bash
@@ -40,7 +40,7 @@ Quick-look SVG plots:
 
 - `average_times_scatter.svg`
 
-- `plot_generators_results.py`:  
+### `plot_generators_results.py`  
 Reads the aggregate CSVs produced by `run_multiple_generators.py` and generates high-quality SVG figures for publication or reports.
 **Usage:**
 ```bash
@@ -56,6 +56,9 @@ The input data folder (`RESULTS_DIR`) and the output plots folder (`PLOT_OUT`) a
 - `time_scatter_grouped.svg`: Scatterplot of average runtime per method and target
 
 - `stacked_generators_panel.svg`: Combined panel with all three metrics
+
+### `get_averages.py`
+Prints the average values of similarity and runtime over the generators analysis runs.
 
 ## Visualizing Generator Structures
 
