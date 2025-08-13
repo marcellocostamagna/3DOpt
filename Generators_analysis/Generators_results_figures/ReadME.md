@@ -8,10 +8,17 @@ The original reference structure (`OFOWIS.sdf`) can be downloaded from the [Camb
 
 ## Usage
 
-To visualize and highlight specific Ir–X bonds (excluding Ir–Cl and the relevant Ir–C bond), edit the `SDF_FILE` variable at the top of `generate_pymols_for_figure.py` to match one of the provided filenames. Then, run the script with PyMOL:
+- `generate_pymols_for_figure.py`:
+To visualize and highlight specific Ir–X bonds (excluding Ir–Cl and the relevant Ir–C bond), edit the `SDF_FILE` variable at the top of the script to match one of the provided filenames. Then, run the script with PyMOL:
 
 ```bash
 pymol generate_pymols_for_figure.py
 ```
 
-The images generated were used in Figure 6 of the main paper (TODO: add reference).
+- `check_chirality_effect.py`:
+Prints the HSR similarity values for the comparison between the generated structures and the target both with and without the chirality discrimination.  
+**Usage**
+```bash
+python check_chirality_effect.py
+```
+
