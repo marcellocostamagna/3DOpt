@@ -105,7 +105,10 @@ for i, gen in enumerate(gens):
     )
 
 # Axes
-ax.set_ylabel("Δ3DOpt Score (ChemGE − RanSam)", fontsize=8, fontname='Arial')
+ax.set_ylabel(r"$\Delta$$_{Task\ Score}$ (ChemGE − RanSam)", 
+              fontsize=8, fontname='Arial')
+
+
 ax.set_xlabel("Task", fontsize=10, fontname='Arial')
 
 ax.set_xticks(x + bar_width * (n_g - 1) / 2)
