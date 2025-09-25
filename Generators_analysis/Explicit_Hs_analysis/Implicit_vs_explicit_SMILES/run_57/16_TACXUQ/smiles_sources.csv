@@ -1,0 +1,3 @@
+SMILES_Source,SMILES
+CSD_SMILES,CC(C=C)C(N=N=[N])C1=C2C3=C(C)[Fe]123(C#O)(C#O)C#O
+RDKit_SMILES_EXPL,[H][C]([H])=[C]([H])[C@@]([H])([C]([H])([H])[H])[C@@]([H])([N]=[N]=[NH])[C@]1([H])=[C@@]2([H])[C@@]3([H])=[C@]([H])([C]([H])([H])[H])[Fe]321([C]#[O])([C]#[O])[C]#[O]

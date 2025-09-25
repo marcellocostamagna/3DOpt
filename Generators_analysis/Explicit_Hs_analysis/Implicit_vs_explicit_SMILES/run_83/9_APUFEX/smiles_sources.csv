@@ -1,0 +1,3 @@
+SMILES_Source,SMILES
+CSD_SMILES,Cl[Au]=C(N1CCCC1)N1CCCC1
+RDKit_SMILES_EXPL,[H][C]1([H])[N]([C](=[Au][Cl])[N]2[C]([H])([H])[C]([H])([H])[C]([H])([H])[C]2([H])[H])[C]([H])([H])[C]([H])([H])[C]1([H])[H]

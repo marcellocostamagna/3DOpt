@@ -1,0 +1,3 @@
+SMILES_Source,SMILES
+CSD_SMILES,CC12=C[Ir]3451(C=C23)c1c(C[P]4(C(F)(F)F)C(F)(F)F)cccc1C[P]5(C(F)(F)F)C(F)(F)F
+RDKit_SMILES_EXPL,[H][C]1:[C]([H]):[C]2:[C]3:[C](:[C]:1[H])[C]([H])([H])[PH]([C]([F])([F])[F])([C]([F])([F])[F])[Ir]3145([C]([H])([H])=[C@@]1([H])[C@@]4([C]([H])([H])[H])=[C]5([H])[H])[PH]([C]([F])([F])[F])([C]([F])([F])[F])[C]2([H])[H]

@@ -21,7 +21,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # === CONFIGURATION ===
-N_RUNS = 3
+N_RUNS = 100
 BASE_OUT = "Implicit_vs_explicit_SMILES"
 SINGLE_SCRIPT = "run_smiles_3d_single.py"  
 
