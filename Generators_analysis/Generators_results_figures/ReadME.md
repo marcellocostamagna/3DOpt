@@ -22,3 +22,10 @@ Prints the HSR similarity values for the comparison between the generated struct
 python check_chirality_effect.py
 ```
 
+- `Hs_effect.py`:  
+Evaluates the effect of removing the two vinyl hydrogens in OFOWIS on HSR similarity.
+Requires both the original structure (`OFOWIS.sdf`) and a modified version (`OFOWIS_H_depleted.sdf`) with the vinyl hydrogens removed.
+**Usage**
+```bash
+python Hs_effect.py
+```
