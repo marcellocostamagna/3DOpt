@@ -4,9 +4,8 @@ This folder provides scripts for aggregating, analyzing, and visualizing the res
 
 ## Obtaining Baselines Results
 
-The complete set of baseline results for the 3DOpt benchmark (all runs, methods, and generators) is available as compressed archives on [Zenodo](https://zenodo.org/records/16602642), DOI: 10.5281/zenodo.16602641.
-
-To download all results files directly to this folder, you can use `wget` as follows:
+The complete set of baseline results for the 3DOpt benchmark (all runs, methods, and generators) is available as compressed archives on [Zenodo](https://zenodo.org/records/16602642), DOI: 10.5281/zenodo.16602641. The aggregated results (i.e., the result of processing the complete set of result by the aggregation script, see below) are included in the present repository as `*.csv` to spare you from downloading and processing the raw data.
+Instead, if you want the original raw data, download the complete set of results directly to this folder with `wget` as follows:
 
 ```bash
 wget -P . -i zenodo_links.txt
@@ -23,6 +22,7 @@ tar -xzf Results_RndSam_CCDC_Smiles.tar.gz
 tar -xzf Results_RndSam_OBabel.tar.gz
 tar -xzf Results_RndSam_RDKit.tar.gz
 ```
+You can run the `aggregate_3DOpt_results.py` to generate the aggregated files, thus overwriting the `*.csv` files.
 
 ## Scripts
 
