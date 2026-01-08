@@ -1,0 +1,3 @@
+SMILES_Source,SMILES
+CSD_SMILES,CC1=N2CCCN3=Cc4c(O[Cu]23Oc2ccccc12)ccc1ccccc41
+RDKit_SMILES_EXPL,[H][C]1=[N]2[C]([H])([H])[C]([H])([H])[C]([H])([H])[N]3=[C]([C]([H])([H])[H])[C]4:[C]([H]):[C]([H]):[C]([H]):[C]([H]):[C]:4[O][Cu@SP2]23[O][C]2:[C]([H]):[C]([H]):[C]3:[C]([H]):[C]([H]):[C]([H]):[C]([H]):[C]:3:[C]:21

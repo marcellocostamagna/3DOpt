@@ -10,7 +10,7 @@ Structures are retained only if they:
 - Are not polymeric
 - Have explicit hydrogens
 - Have a "component of interest" with more than 5 atoms
-- The component of interest has **no disorder** or overlapping atoms
+- The component of interest has no disordered or overlapping atoms
 - The component of interest has a valid SMILES string
 
 ## Usage

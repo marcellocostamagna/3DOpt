@@ -1,0 +1,3 @@
+SMILES_Source,SMILES
+CSD_SMILES,Cl[Zr]123456789(Cl)c%10c1(c12ccccc31c4%10[Si](C)(C)[Si](C)(C)c15c6c7(c28ccccc912)[Si](C)(C)C)[Si](C)(C)C
+RDKit_SMILES_EXPL,[H][C]1:[C]([H]):[C]([H]):[C@@]23:[C@@]4([Si]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[H]):[C@@]5([H]):[C@@]67:[C@]:2(:[C]:1[H])[Zr]56431289([Cl])([Cl])[C@]3([H]):[C@@]1([Si]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[H]):[C@]21:[C]([H]):[C]([H]):[C]([H]):[C]([H]):[C@@]:18:[C@@]:39[Si]([C]([H])([H])[H])([C]([H])([H])[H])[Si]7([C]([H])([H])[H])[C]([H])([H])[H]

@@ -1,0 +1,3 @@
+SMILES_Source,SMILES
+CSD_SMILES,CC#N[Co+]1(C(c2ccccc2)#C1c1ccccc1)([P](C)(C)C)([P](C)(C)C)[P](C)(C)C
+RDKit_SMILES_EXPL,[H][C]1:[C]([H]):[C]([H]):[C]([C]2#[C]([C]3:[C]([H]):[C]([H]):[C]([H]):[C]([H]):[C]:3[H])[Co+]2([N]#[C][C]([H])([H])[H])([PH]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[H])([PH]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[H])[PH]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[H]):[C]([H]):[C]:1[H]

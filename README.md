@@ -3,7 +3,7 @@
 **3DOpt** is the first benchmark for molecular de novo design to test generative methods for their ability to handle and optimize both organic and inorganic molecules in 3D. This benchmark is now part of the benchmarking framework [MolScore](https://github.com/MorganCThomas/MolScore).
 
 This repository contains the scripts, workflows, and analyses developed for 3DOpt, as well as supporting work presented in the associated article ([TODO: add reference]).  
-It includes workflows for filtering and preparing chemical data (`Filtering`, `Starting_populations`), scripts to test and compare such data (`CAEs`, `CAEs_analysis`, `Metal_targets_statistics`), tests on tools used for baseline methods (`Generators_analysis`), scripts to generate configuration files for MolScore (`3DOpt_configuration`), and scripts to aggregate and visualize baseline results (`Plot_3DOpt_results`).
+It includes workflows for filtering and preparing chemical data (`Filtering`, `Starting_populations`), scripts to test and compare such data (`CAEs`, `CAEs_analysis`, `Metal_targets_statistics`), tests on tools used for baseline methods (`Generators_analysis`), scripts to generate configuration files for MolScore (`3DOpt_configuration`), and scripts to aggregate, analyze and visualize baseline results (`3DOpt_baselines_results`).
 
 ## Set Up
 To run any script in the repo, first create and activate the provided conda environment:
@@ -12,7 +12,7 @@ To run any script in the repo, first create and activate the provided conda envi
 conda env create -f environment.yml
 conda activate 3DOpt_devel
 ```
-*Note: Some scripts require a valid CCDC license*x
+*Note: Some scripts require a valid CCDC license*
 
 ## Overview
 Each folder contains its own README describing the aim and usage of the scripts. Below is a brief overview:
@@ -38,8 +38,8 @@ Benchmarking of the three 3D structure generators used  (`CCDC`, `OBabel`, `RDKi
 - `3DOpt_configuration`:  
 Scripts to generate MolScore configuration files for 3DOpt, as well as 2D diagrams for the selected targets.
 
-- `Plot_3DOpt_results`:  
-Scripts to aggregate and plot results from 3DOpt runs using two baseline methods: `RandomSampler` and `ChemGE`. For further information, see [Molscore_baselines](https://github.com/MorganCThomas/MolScore_baselines).
+- `3DOpt_baselines_results`:  
+Scripts to aggregate, analyze, and plot results from 3DOpt runs using two baseline methods: `RandomSampler` and `ChemGE`. For further information, see [Molscore_baselines](https://github.com/MorganCThomas/MolScore_baselines).
 
 
 ## References 

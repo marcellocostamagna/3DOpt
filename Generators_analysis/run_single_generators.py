@@ -171,7 +171,7 @@ def main():
                 if m == "obabel":
                     arr = get_array_from_pybelmol(mol3d)
                 elif m == "rdkit":
-                    arr = pp.molecule_to_ndarray(mol3d, features=PROTON_FEATURES, removeHs=True)
+                    arr = pp.molecule_to_ndarray(mol3d, features=PROTON_FEATURES, removeHs=False)
                 else:  # ccdc
                     arr = get_array_from_ccdcmol(mol3d)
                 fp_gen  = fp.generate_fingerprint_from_data(arr)

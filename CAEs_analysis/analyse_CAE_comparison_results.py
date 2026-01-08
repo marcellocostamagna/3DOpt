@@ -19,7 +19,7 @@ targets = ['ABAHIW', 'ABAKIZ', 'ABADOX', 'ABABIP', 'GASQOK', 'ABEKIE',
            'ADUPAS', 'DAJLAC', 'OFOWIS', 'CATSUL', 'HESMUQ01', 'GUDQOL',
            'ABEVAG', 'AKOQOH', 'ADARUT', 'AFECIA', 'ACOVUL', 'AFIXEV', 'ABAYAF', 'RULJAM']
 
-folder_path = "cae_comparison_results_0_5" # <--- CHANGE THIS IF NEEDED
+folder_path = "../CAEs/cae_comparison_results_0_5" # <--- CHANGE THIS IF NEEDED
 
 total_all = 0
 matched_all = 0

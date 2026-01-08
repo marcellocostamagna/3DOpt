@@ -1,0 +1,3 @@
+SMILES_Source,SMILES
+CSD_SMILES,CC(C)OC(=O)c1ccc(cc1)N(=O)=O
+RDKit_SMILES_EXPL,[H][C]1:[C]([H]):[C]([N](=[O])=[O]):[C]([H]):[C]([H]):[C]:1[C](=[O])[O][C]([H])([C]([H])([H])[H])[C]([H])([H])[H]

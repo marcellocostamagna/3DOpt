@@ -1,0 +1,3 @@
+SMILES_Source,SMILES
+CSD_SMILES,C[Pt](C)(C)(N1N=C2CCCCCCC2=N1)([P](C)(C)C)[P](C)(C)C
+RDKit_SMILES_EXPL,[H][C]1([H])[C]2=[N][N]([Pt@OH17]([C]([H])([H])[H])([C]([H])([H])[H])([C]([H])([H])[H])([PH]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[H])[PH]([C]([H])([H])[H])([C]([H])([H])[H])[C]([H])([H])[H])[N]=[C]2[C]([H])([H])[C]([H])([H])[C]([H])([H])[C]([H])([H])[C]1([H])[H]

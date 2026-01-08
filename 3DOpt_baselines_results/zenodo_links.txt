@@ -1,0 +1,7 @@
+https://zenodo.org/records/16602642/files/Results_ChemGE_CCDC.tar.gz
+https://zenodo.org/records/16602642/files/Results_ChemGE_OBabel.tar.gz
+https://zenodo.org/records/16602642/files/Results_ChemGE_RDKit.tar.gz
+https://zenodo.org/records/16602642/files/Results_RndSam_CCDC_Entries.tar.gz
+https://zenodo.org/records/16602642/files/Results_RndSam_CCDC_Smiles.tar.gz
+https://zenodo.org/records/16602642/files/Results_RndSam_OBabel.tar.gz
+https://zenodo.org/records/16602642/files/Results_RndSam_RDKit.tar.gz
