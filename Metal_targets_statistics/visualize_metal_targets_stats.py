@@ -48,7 +48,7 @@ def plot_horizontal_histogram(data, title, svg_path, color):
     y_pos = np.arange(len(labels))
     bar_width = 0.65
     
-    fig, ax = plt.subplots(figsize=(6.93, 3.3))
+    fig, ax = plt.subplots(figsize=(6.93, 2.8))
     bars = ax.barh(y_pos, values, color=color, edgecolor='black', linewidth=0.5, height=bar_width)
     
     for bar, value in zip(bars, values):
@@ -59,7 +59,7 @@ def plot_horizontal_histogram(data, title, svg_path, color):
     ax.set_yticklabels([f"{label}" for label in labels], fontsize=9, fontname='Arial')
     ax.invert_yaxis()
     ax.set_xlabel("Count", fontsize=10, fontname='Arial')
-    ax.set_title(f"{title} Distribution", fontweight='bold', fontsize=11, fontname='Arial')
+    # ax.set_title(f"{title} Distribution", fontweight='bold', fontsize=11, fontname='Arial')
     ax.tick_params(axis='both', labelsize=9)
     
     ax.spines['right'].set_visible(False)
